@@ -1,25 +1,39 @@
-.PHONY: all clean fclean re
+.PHONY: all clean fclean re debug
 
-NAME = myphonebook
+NAME = phoneBook
+
+SRC = ${addprefix src/, main.cpp\
+						Contact.cpp\
+						PhoneBook.cpp\
+						utils.cpp}
+
+HEADERS =  ${addprefix include/,	Contact.hpp \
+          							PhoneBook.hpp \
+         							utils.hpp}
+
+OBJ = $(SRC:src/%.cpp=build/%.o)
+
+CXXFLAGS = -Wall -Wextra -Werror -std=c++98 -Iinclude
 
 CXX = c++
 
-CXXFLAGS = -Wall -Wextra -Werror -std=c++98
-
-SRC = megaphone.cpp
-
-OBJ = $(SRC:.cpp=.o)
+DFLAG = -g
 
 all: $(NAME)
 
 $(NAME): $(OBJ)
 		$(CXX) $(OBJ) -o $(NAME)
 
-%.o: %.cpp
+build/%.o: src/%.cpp $(HEADERS)
+	@mkdir -p $(dir $@)
 	$(CXX) $(CXXFLAGS) -o $@ -c $<
 
+debug: CXXFLAGS += $(DFLAG)
+debug:	fclean $(NAME)
+		@echo "Debug_Build done"
+
 clean:
-	rm -f $(OBJ)
+	rm -rf build
 
 fclean: clean
 	rm -f $(NAME)

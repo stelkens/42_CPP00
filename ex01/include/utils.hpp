@@ -1,23 +1,24 @@
 /* ************************************************************************** */
 /*                                                                            */
 /*                                                        :::      ::::::::   */
-/*   PhoneBookClass.hpp                                 :+:      :+:    :+:   */
+/*   utils.hpp                                          :+:      :+:    :+:   */
 /*                                                    +:+ +:+         +:+     */
 /*   By: tstelken <tstelken@student.42berlin.de>    +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
-/*   Created: 2026/07/06 15:41:47 by tstelken          #+#    #+#             */
-/*   Updated: 2026/07/06 15:41:48 by tstelken         ###   ########.fr       */
+/*   Created: 2026/07/19 19:22:33 by tstelken          #+#    #+#             */
+/*   Updated: 2026/07/19 20:51:36 by tstelken         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
-#ifndef PHONEBOOKCLASS_H
-# define PHONEBOOKCLASS_H
+#ifndef UTILS_HPP
+# define UTILS_HPP
 
-class PhoneBook {
+#include<string>
+#include<iostream>
+#include<cstdlib>
 
-public:
-	PhoneBook(void);
-	~PhoneBook(void);
-};
+
+void	getinput(std::string &uInput, const std::string &prompt);
+bool	isNum(const std::string& s);
 
 #endif
