@@ -6,7 +6,7 @@
 /*   By: tstelken <tstelken@student.42berlin.de>    +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2026/07/06 15:41:47 by tstelken          #+#    #+#             */
-/*   Updated: 2026/07/19 21:19:06 by tstelken         ###   ########.fr       */
+/*   Updated: 2026/07/20 11:33:42 by tstelken         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -32,9 +32,9 @@ private:
 
 public:
 	PhoneBook(void);
-	void		setContact(void);
-	void		listContacts(void);
-	//void		showEntry(std::string);
+	bool		setContact(void);
+	bool		listContacts(void);
+	bool		showEntry(void);
 	const int&	getSize(void) const;
 };
 
