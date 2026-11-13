@@ -2,7 +2,8 @@
 
 # C++ Modules
 
-This repository contains the C++ modules from the 42 Common Core. This project introduce the fundamentals of **Object-Oriented Programming (OOP)** and serve as the starting point of my C++ journey.
+This repository contains the C++ modules from the 42 Common Core. 
+This project introduce the fundamentals of **Object-Oriented Programming (OOP)** and serve as the starting point of my C++ journey.
 
 The exercises are implemented using the **C++98 standard**, focusing on core concepts and the transition from C to C++.
 
